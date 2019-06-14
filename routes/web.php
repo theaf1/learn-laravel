@@ -18,3 +18,6 @@ Route::get('/home', function () {
 
     return "hello world";
 });
+Route::get('/index',function(){ 
+    return view ('index');
+});
