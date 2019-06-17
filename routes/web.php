@@ -19,5 +19,13 @@ Route::get('/home', function () {
     return "hello world";
 });
 Route::get('/index',function(){ 
-    return view ('index');
+    $title = "create form";
+    $genders[] = ['id' => 0, 'name' => 'หญิง'];
+    $genders[] = ['id' => 1, 'name' => 'ชาย'];
+    return view ('index')->with(['title' => $title,'genders' => $genders]);
+});
+
+route::post('/store',function(Illuminate\Http\Request $request){
+    return $request->all();
+    return "Login Success";
 });
