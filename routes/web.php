@@ -43,10 +43,11 @@ route::post('/store',function(Illuminate\Http\Request $request){
     return "Login Success";
 });
 Route::get('tasks/create', function(){
-    $types[] = [ 'id' => 1 , 'name' => 'Support' ];
-    $types[] = [ 'id' => 2 , 'name' => 'Mantain' ];
-    $types[] = [ 'id' => 3 , 'name' => 'Change Requirement' ];
+    // $types[] = [ 'id' => 1 , 'name' => 'Support' ];
+    // $types[] = [ 'id' => 2 , 'name' => 'Mantain' ];
+    // $types[] = [ 'id' => 3 , 'name' => 'Change Requirement' ];
 
+    $types=\App\Type::all();
     $statuses[] = [ 'id' => 0 , 'name' => 'Incomplete' ];
     $statuses[] = [ 'id' => 1 , 'name' => 'Completed' ];
     return view('tasks.create')->with( ['types'=>$types, 'statuses'=>$statuses ] );

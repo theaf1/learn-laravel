@@ -11,8 +11,8 @@
     @endif
     <form action="{{ url('/tasks/store') }}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token()}}">
-            <label for="type">Type :</label>
-            <select class="form-control" name="type">
+            <label for="type_id">Type :</label>
+            <select class="form-control" name="type_id">
         <!-- <select name="type"> -->
         @foreach($types as $type)
         <option value="{{ $type['id'] }}">{{ $type['name'] }}</option>

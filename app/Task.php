@@ -7,9 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     protected $fillable = [
-        'type',
+        'type_id',
         'name',
         'detail',
         'status'
     ];
+    public function getType(){
+        return $this->belongsTo(Type::class,'type');
+    }
 }
