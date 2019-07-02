@@ -9,6 +9,9 @@
             {{ $message }}
         </div>
     @endif
+    <!-- @if
+
+    @endif -->
     <form action="{{ url('/tasks/store') }}" method="POST">
         <input type="hidden" name="_token" value="{{ csrf_token()}}">
             <label for="type_id">Type :</label>
