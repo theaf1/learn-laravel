@@ -15,3 +15,7 @@
     <input type="submit" value ="submit">
     </form>
 @endsection
+@section('report')
+    namespace \App\Tasks;
+    use illuminate\database\
+@endsection

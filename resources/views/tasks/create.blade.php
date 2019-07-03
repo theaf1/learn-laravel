@@ -25,7 +25,7 @@
     <label class="text-inline">Status :</label>
         <label class="radio-inline">
         @foreach($statuses as $status)
-            <input type="radio" name="status"  value="{{ $status['id']}}">{{ $status['name']}}
+            <input type="radio" name="status"  value="{{ $status['id']}}" >{{ $status['name']}}
             </label>&nbsp;
         @endforeach
     <button type="submit" class="btn btn-success">Submit</button>
